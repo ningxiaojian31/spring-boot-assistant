@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <title>管理员登录</title>
+</head>
+<body>
+<h3 class="text-center">管理员登录</h3>
+<div style="padding: 100px 400px 50px;">
+    <form class="bs-example bs-example-form" th:action="@{/admin/login}" method="post">
+        <div style=" margin: auto ; padding: 20px 100px 10px ; width: 500px" class="input-group">
+            <span class="input-group-addon">用户名：</span>
+            <input class="form-control" name="userLoginname" type="text"/>
+        </div >
+        <div style="margin: auto ; padding: 20px 100px 20px ; width: 500px" class="input-group">
+            <span class="input-group-addon">密码：</span>
+            <input class="form-control" name="userPassword" type="password"/>
+        </div>
+        <input style="margin: auto ;width: 100px" class="form-control" type="submit" value="登录"/><br/>
+    </form>
+</div>
+<h5 class="text-center" th:if="${session.msg}!= ''">[[${session.msg}]]</h5>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script th:src="@{js/bootstrap.min.js}"></script>
+</body>
+</html>

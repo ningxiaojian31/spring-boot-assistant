@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zdxh.assistant.mapper.OrderCustomerMapper">
+    <resultMap id="findByPubAndApp" type="cn.zdxh.assistant.pojo.OrderCustomer">
+        <association property="publish" javaType="cn.zdxh.assistant.pojo.PublishCustomer">
+            <result property="pubSign" column="pub_sign"/>
+            <result property="pubImage" column="pub_image"/>
+            <result property="pubContent" column="pub_content"/>
+        </association>
+        <association property="user" javaType="cn.zdxh.assistant.pojo.UserCustomer">
+            <result property="userLoginname" column="user_loginname"/>
+            <result property="userName" column="user_name"/>
+            <result property="userImage" column="user_image"/>
+            <result property="userWxNumber" column="user_wx_number"/>
+        </association>
+    </resultMap>
+    <select id="findOrderByPublisher" resultMap="findByPubAndApp" parameterType="integer">
+        SELECT
+        publish.pub_sign,
+        publish.pub_image,
+        publish.pub_content,
+        `user`.user_loginname,
+        `user`.user_name,
+        `user`.user_image,
+        `user`.user_wx_number
+        FROM `user` u
+        LEFT JOIN publish
+        on u.id=publish.user_id
+        LEFT JOIN `order`
+        ON publish.id=`order`.pub_id
+        LEFT JOIN `user`
+        ON `order`.user_id=`user`.id
+        WHERE u.id=#{id}
+    </select>
+    <select id="findOrderByAppointment" resultMap="findByPubAndApp" parameterType="integer">
+        SELECT
+        publish.pub_sign,
+        publish.pub_image,
+        publish.pub_content,
+        `user`.user_loginname,
+        `user`.user_name,
+        `user`.user_image,
+        `user`.user_wx_number
+        FROM `order`
+        LEFT JOIN publish
+        ON `order`.pub_id=publish.id
+        LEFT JOIN `user`
+        ON publish.user_id=`user`.id
+        WHERE `order`.user_id=#{id}
+    </select>
+
+    <insert id="insertOrder" parameterType="cn.zdxh.assistant.pojo.OrderCustomer" >
+        INSERT INTO `order`(user_id,pub_id) VALUES(#{user.id},#{publish.id})
+    </insert>
+</mapper>

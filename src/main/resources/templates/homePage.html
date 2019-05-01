@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <title>管理员后台</title>
+</head>
+<body>
+<h3 class="text-center" th:if="${session.admin.userLoginname} != ''">[[${session.admin.userLoginname}]]管理员，您好</h3>
+<h4 style="margin: 50px" class="text-center"><a th:href="@{/admin/invs/5(startPage=0)}">树洞管理子系统</a></h4>
+<h4 style="margin: 50px" class="text-center"><a th:href="@{/admin/pubs/5(startPage=0)}">拼伞/饭管理子系统</a></h4>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script th:src="@{js/bootstrap.min.js}"></script>
+</body>
+</html>

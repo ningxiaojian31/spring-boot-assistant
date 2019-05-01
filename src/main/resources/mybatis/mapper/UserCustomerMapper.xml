@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zdxh.assistant.mapper.UserCustomerMapper">
+    <update id="changePic" parameterType="cn.zdxh.assistant.pojo.UserCustomer" >
+        UPDATE `user` SET `user`.user_image=#{userImage} WHERE id=#{id}
+    </update>
+</mapper>

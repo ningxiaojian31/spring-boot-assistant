@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zdxh.assistant.mapper.CommentCustomerMapper">
+    <resultMap id="findComDetail" type="cn.zdxh.assistant.pojo.CommentCustomer">
+        <id property="id" column="id"/>
+        <result property="comDate" column="com_date"/>
+        <result property="comContent" column="com_content"/>
+        <result property="comLaud" column="com_laud"/>
+        <result property="userId" column="user_id"/>
+        <result property="invId" column="inv_id"/>
+        <collection property="replys" ofType="cn.zdxh.assistant.pojo.ReplyCustomer">
+            <id property="id" column="rid"/>
+            <result property="reType" column="re_type"/>
+            <result property="reContent" column="re_content"/>
+            <result property="reLaud" column="re_laud"/>
+            <result property="comId" column="com_id"/>
+            <result property="userIdFrom" column="user_id_from"/>
+            <result property="userIdTo" column="user_id_to"/>
+            <association property="userFrom" javaType="cn.zdxh.assistant.pojo.UserCustomer">
+                <id property="id" column="uid"/>
+                <result property="userLoginname" column="user_loginname"/>
+                <result property="userImage" column="user_image"/>
+            </association>
+            <association property="userTo" javaType="cn.zdxh.assistant.pojo.UserCustomer">
+                <id property="id" column="uid2"/>
+                <result property="userLoginname" column="user_loginname2"/>
+                <result property="userImage" column="user_image2"/>
+            </association>
+        </collection>
+
+    </resultMap>
+    <select id="findCommentDetailById" resultMap="findComDetail" parameterType="integer">
+        SELECT
+          comment.id,
+          comment.com_date,
+          comment.com_content,
+          comment.com_laud,
+          comment.user_id,
+          comment.inv_id,
+          reply.id rid,
+          reply.re_type,
+          reply.re_content,
+          reply.re_laud,
+          reply.com_id,
+          reply.user_id_from,
+          reply.user_id_to,
+          user_from.id uid,
+          user_from.user_loginname,
+          user_from.user_image,
+          user_to.id uid2,
+          user_to.user_loginname user_loginname2,
+          user_to.user_image user_image2
+        FROM comment
+        LEFT JOIN reply
+        ON comment.id=reply.com_id
+        LEFT JOIN user user_from
+        ON reply.user_id_from=user_from.id
+        LEFT JOIN user user_to
+        ON reply.user_id_to=user_to.id
+        WHERE comment.id=#{id}
+    </select>
+</mapper>
