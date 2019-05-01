@@ -179,3 +179,41 @@ INSERT INTO `user` VALUES ('15', 'xiao', '12345', '侧田', '16053080', null, '5
 INSERT INTO `user` VALUES ('16', 'xiao', '12345', '侧田', '16053080', null, '5555200000', '2');
 INSERT INTO `user` VALUES ('17', 'admin', '123456', '我是管理员', '4245254242', 'wwwwwww', '11111111111111', '1');
 INSERT INTO `user` VALUES ('18', 'xiao', '12345', '侧田', '16053080', null, '5555200000', null);
+
+/*
+user表:（用户表）
+id:(int 自动增长)主键
+user_loginname:(varchar)登录名
+user_password:(varchar)登录密码
+user_name:(varchar)姓名
+user_studentID:(varchar 唯一)学号
+user_image:(varchar)头像
+user_wx_number:(varchar)微信号
+
+comment表（评论表）
+id:(int 自动增长)主键
+com_date:(Date)评论时间
+com_content:(varchar)评论内容
+com_laud:(int)评论赞数
+user_id:(int)评论用户外键
+inv_id:(int)帖子的外键
+
+invitation表（匿名发帖表）
+id:(int 自动增长)主键
+inv_content:(varchar)帖子内容
+inv_laud:(int)帖子赞数
+
+publish表（发布信息表）
+id:(int 自动增长)主键
+pub_sign:(int)标记是拼饭还是拼伞
+pub_image:(varchar):发布信息的照片
+pub_content:(varchar):发布的信息内容
+user_id:(int)发布信息用户外键
+
+order表（预约信息表）
+id:(int 自动增长)主键
+ord_sign:(int)是否预约成功标志
+user_id:(int)申请预约用户外键
+pub_id:(int)预约信息的外键
+
+*/
