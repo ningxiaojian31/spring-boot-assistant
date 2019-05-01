@@ -9,4 +9,15 @@
 
 4、不足之处：没加到异常处理机制、返回的json格式也没有做统一格式处理，有兴趣的可以自行增加
 
-4、另一端为Android端，代码暂未上传
+5、另一端为Android端，代码暂未上传
+
+6、Android端的运行效果：
+
+![image]E:\QQPCmgr\Desktop\图片1.png
+
+![image](E:\QQPCmgr\Desktop\图片2.png)
+
+![image](E:\QQPCmgr\Desktop\图片3.png)
+
+![image](E:\QQPCmgr\Desktop\图片4.png)
+
