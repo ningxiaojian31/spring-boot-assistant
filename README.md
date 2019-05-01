@@ -13,7 +13,7 @@
 
 6、Android端的运行效果：
 
-![image](E:\QQPCmgr\Desktop\图片1.png)
+![image]E:\QQPCmgr\Desktop\图片1.png
 
 ![image](E:\QQPCmgr\Desktop\图片2.png)
 
