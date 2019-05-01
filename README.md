@@ -15,9 +15,5 @@
 
 <img src="https://github.com/ningxiaojian31/spring-boot-assistant/blob/master/src/document/pic/%E5%9B%BE%E7%89%871.png" width="350px"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/ningxiaojian31/spring-boot-assistant/blob/master/src/document/pic/%E5%9B%BE%E7%89%872.png" width="350px"></img>    
 
-![image](E:\QQPCmgr\Desktop\图片2.png)
-
-![image](E:\QQPCmgr\Desktop\图片3.png)
-
-![image](E:\QQPCmgr\Desktop\图片4.png)
+<img src="https://github.com/ningxiaojian31/spring-boot-assistant/blob/master/src/document/pic/%E5%9B%BE%E7%89%873.png" width="350px"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/ningxiaojian31/spring-boot-assistant/blob/master/src/document/pic/%E5%9B%BE%E7%89%874.png" width="350px"></img> 
 
