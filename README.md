@@ -13,7 +13,7 @@
 
 6、Android端的运行效果：
 
-![image]E:\QQPCmgr\Desktop\图片1.png
+![image](https://github.com/ningxiaojian31/spring-boot-assistant/blob/master/src/document/pic/%E5%9B%BE%E7%89%871.png)
 
 ![image](E:\QQPCmgr\Desktop\图片2.png)
 
