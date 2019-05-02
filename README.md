@@ -10,7 +10,7 @@ Android端代码：https://github.com/ningxiaojian31/assistant
 
 ### 3、数据持久层采用了Spring Data JPA + Mybatis，旨在探索两者的用法的不同，建议一般的查询用JPA，复杂的查询用mybatis,或者使用更加出色的Mybatis-Plus
 
-### 4、不足之处：没加到异常处理机制、返回的json格式也没有做统一格式处理，有兴趣的可以自行增加
+### 4、不足之处：没加到异常处理机制、返回的json格式也没有做统一格式处理，而且后台管理的某些功能也还没完善，有兴趣的可以自行增加
 
 ### 5、Android端的运行效果：
 
