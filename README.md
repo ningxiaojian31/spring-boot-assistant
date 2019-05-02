@@ -1,5 +1,7 @@
 # spring-boot-assistant
+
 新华生活小助手项目:仿微博里面的树洞，是一款促进大学生交流的社交软件。
+
 Android端代码：https://github.com/ningxiaojian31/assistant
 
 ### 1、该项目作为Spring Boot项目，内置Tomcat，端口为8090，开发工具IntelliJ IDEA
