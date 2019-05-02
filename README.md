@@ -29,3 +29,11 @@ Android端代码：https://github.com/ningxiaojian31/assistant
 <img src="https://github.com/ningxiaojian31/spring-boot-assistant/blob/master/src/document/pic/%E5%9B%BE%E7%89%876.png" width="700px"></img> 
 <img src="https://github.com/ningxiaojian31/spring-boot-assistant/blob/master/src/document/pic/%E5%9B%BE%E7%89%877.png" width="700px"></img> 
 
+
+### 7、功能需求图：
+
+
+
+<img src="https://github.com/ningxiaojian31/spring-boot-assistant/blob/master/src/document/pic/%E5%9B%BE%E7%89%878.png" width="700px"></img>
+<img src="https://github.com/ningxiaojian31/spring-boot-assistant/blob/master/src/document/pic/%E5%9B%BE%E7%89%879.png" width="700px"></img> 
+
