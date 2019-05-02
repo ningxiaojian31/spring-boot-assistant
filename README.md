@@ -1,7 +1,7 @@
 # spring-boot-assistant
 新华生活小助手项目后端代码
 
-### 1、该项目作为Spring Boot项目，内置Tomcat，端口为8090
+### 1、该项目作为Spring Boot项目，内置Tomcat，端口为8090，开发工具IntelliJ IDEA
 
 ### 2、相关建表请参考sql文件
 
